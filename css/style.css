@@ -1,0 +1,296 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+html {
+  font-size: 0.54vw;
+}
+
+/* ----- header ----- */
+
+header {
+  display: flex;
+  justify-content: space-around;
+  height: 110px;
+}
+
+h1 {
+  width: 20vw;
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  font-size: 2.5rem;
+  align-items: center;
+  height: 100%;
+}
+nav ul li a {
+  color: #000;
+  text-decoration: none;
+}
+
+nav ul li::after {
+  content: "|";
+  margin-left: 1rem;
+}
+/* ----- main ----- */
+
+/* section firstView*/
+#firstView {
+  overflow: hidden;
+  height: calc(105vh - 110px);
+  position: relative;
+}
+
+#firstView img:nth-child(1) {
+  position: absolute;
+  opacity: 0.6;
+  transform: scale(1.2) translate(8%, 10%);
+}
+
+.fCatch {
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  /* background-color: #fffffff55; */
+  transform: translate(-50%, -50%);
+  width: 40vw;
+  height: 10vw;
+}
+
+/* トップの手 */
+.fCatch img:nth-child(2) {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16%;
+  transform: translate(0, -50%) rotate(-90deg);
+  filter: drop-shadow(0 0 4px #fff);
+  animation: tHand 1s ease 1s forwards;
+  transform-origin: 40% 30%;
+}
+/* トップの地球 */
+.fCatch img:nth-child(4) {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 16%;
+  transform: translate(0, -50%);
+  filter: drop-shadow(0 0 4px #fff);
+}
+
+/* ほら */
+.fCatch p:nth-child(1) {
+  position: absolute;
+  top: 32%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5rem;
+  font-weight: bolder;
+  opacity: 0;
+  animation: blurIn 0.7s ease 2.5s forwards;
+}
+/* ack */
+.fCatch p:nth-child(5) {
+  position: absolute;
+  top: 68%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+  font-size: 3.5rem;
+  font-weight: bolder;
+  color: #ba2222;
+  opacity: 0;
+  animation: blurIn 0.7s ease 2.8s forwards;
+}
+/* 矢印 */
+.fArrow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip-path: inset(0 100% 0 0);
+  transform: scale(0.9);
+  animation: tArrow 1.8s ease 1.5s forwards;
+}
+.arrowStick {
+  position: absolute;
+  top: 47%;
+  left: 20%;
+  width: 55%;
+  height: 3px;
+  background-color: #000;
+}
+
+.arrowHead {
+  position: absolute;
+  top: 40%;
+  left: 76%;
+  width: 1vw;
+  height: 1.5vw;
+  background-color: #000;
+  clip-path: polygon(0 0, 0% 100%, 100% 50%);
+}
+
+/* section about */
+#about {
+  text-align: center;
+  margin-top: 10rem;
+}
+
+#about h2 {
+  font-size: 15rem;
+}
+
+#about p:nth-child(2) {
+  font-size: 4rem;
+  margin-top: -3rem;
+  font-weight: bolder;
+}
+
+#about img {
+  width: 45%;
+  margin-top: 5rem;
+}
+
+.aboutInfotitle {
+  margin-top: 12rem;
+  font-size: 4.2rem;
+  font-weight: bolder;
+}
+
+.aboutInfo {
+  margin-top: -3rem;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/* section web */
+#web {
+  margin: 20rem 0;
+}
+
+.gowebIcon {
+  width: 20vw;
+  display: block;
+  margin: 0 auto;
+}
+
+#web h2 {
+  text-align: center;
+  width: 100%;
+  font-size: 7rem;
+  margin-top: 5rem;
+}
+
+.webInfo {
+  text-align: center;
+  width: 100%;
+  font-size: 2.5rem;
+  font-weight: bolder;
+  margin-top: 1rem;
+}
+
+.webContentsContainer {
+  width: 80vw;
+  height: 75vw;
+  margin: 10rem auto;
+  background-color: #3b8aac;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 25vw 25vw 25vw;
+}
+
+.webContents {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  padding: 1rem 3rem;
+}
+.webImage {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.webBacktitle {
+  font-size: 9rem;
+  font-weight: bolder;
+  /* opacity: 0.35; */
+  opacity: 0;
+  transform: translate(-20%, 0);
+  filter: blur(10px);
+  transition: 1.5s all ease;
+}
+
+.webContents h3 {
+  width: 40%;
+  font-size: 4rem;
+  border-bottom: #fff solid 1px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.webContents p:nth-child(3) {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  text-align: center;
+  margin-top: 3rem;
+}
+.webContents p:nth-child(4) {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+/* ----- footer ----- */
+
+/* animation */
+@keyframes tHand {
+  0% {
+    transform: translate(0, -50%) rotate(-90deg);
+  }
+
+  100% {
+    transform: translate(0, -50%) rotate(0deg);
+  }
+}
+
+@keyframes tArrow {
+  0% {
+    clip-path: inset(0 100% 0 0);
+    transform: scale(0.9);
+  }
+
+  100% {
+    clip-path: inset(0 0 0 0);
+    transform: scale(1.05);
+  }
+}
+
+@keyframes blurIn {
+  0% {
+    filter: blur(15px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+/* スクロールアニメーション */
+
+.webContents.active .webBacktitle {
+  opacity: 0.35;
+  transform: translate(0, 0);
+  filter: blur(0);
+}
